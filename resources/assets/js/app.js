@@ -9,7 +9,7 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 import Buefy from 'buefy';
-vue.use(Buefy);
+Vue.use(Buefy);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -21,4 +21,10 @@ vue.use(Buefy);
 
 const app = new Vue({
     el: '#app'
+});
+
+$(document).ready(function() {
+    $('.dropdown').hover(function(e) {
+        $(this).toggleClass('is-open');
+    });
 });
