@@ -18,3 +18,18 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('/users', 'UserController');
+Route::resource('/departments', 'DepartmentController');
+Route::resource('/positions', 'PositionController');
+Route::resource('/routines', 'RoutineController');
+Route::post('/user/validateUserForm', 'UserController@validateUserForm');
+Route::put('/user/updatePassword', 'UserController@updatePassword');
+
+Route::group(['middleware' => 'auth'], function () {
+    //    Route::get('/link1', function ()    {
+//        // Uses Auth Middleware
+//    });
+
+    //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
+    #adminlte_routes
+});

@@ -795,7 +795,7 @@ __webpack_require__(10);
 
 window.Vue = __webpack_require__(34);
 
-vue.use(__WEBPACK_IMPORTED_MODULE_0_buefy___default.a);
+Vue.use(__WEBPACK_IMPORTED_MODULE_0_buefy___default.a);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -806,7 +806,13 @@ vue.use(__WEBPACK_IMPORTED_MODULE_0_buefy___default.a);
 // Vue.component('example', require('./components/Example.vue'));
 
 var app = new Vue({
-  el: '#app'
+    el: '#app'
+});
+
+$(document).ready(function () {
+    $('.dropdown').hover(function (e) {
+        $(this).toggleClass('is-open');
+    });
 });
 
 /***/ }),

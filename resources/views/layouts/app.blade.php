@@ -15,15 +15,119 @@
 </head>
 <body>
     <div id="app">
-        <nav class="nav has-shadow">
+        <nav class="navbar has-shadow">
             <div class="container">
-                <div class="nav-left">
-                    <a class="nav-item is-paddingless" href="{{ route('home') }}">
-                        <img src="{{ asset('images/devmarketer-logo.png') }}" alt="Компания ГРОССБУХ LOGO">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="{{ route('home') }}">
+                        <img src="{{ asset('images/devmarketer-logo.png') }}" alt="LOGO">
                     </a>
-                    <a href="#" class="nav-item is-tab is-hidden-mobile m-l-10">Jopa 1</a>
-                    <a href="#" class="nav-item is-tab is-hidden-mobile">Jopa 2</a>
-                    <a href="#" class="nav-item is-tab is-hidden-mobile">Jopa 3</a>
+                </div>
+                <div class="navbar-menu">
+                    <div class="navbar-start m-l-10">
+                        <button class="navbar-item has-dropdown is-hoverable is-tab">
+                            <a class="navbar-item">
+                                <i class='fa fa-gears m-r-5'></i>
+                                Отчеты
+                            </a>
+                            <div class="navbar-dropdown ">
+                                <a class="navbar-item" href={{ url('/users') }}>
+                                    <span class="icon">
+                                        <i class="fa fa-fw fa-users m-r-10"></i>
+                                    </span>
+                                    Ежедневные</a>
+                                <a class="navbar-item" href="http://bulma.io/documentation/modifiers/syntax/">
+                                    <span class="icon">
+                                        <i class="fa fa-fw fa-bell m-r-10"></i>
+                                    </span>
+                                    Сводные
+                                </a>
+                                <a class="navbar-item" href="http://bulma.io/documentation/columns/basics/">
+                                    <span class="icon">
+                                        <i class="fa fa-fw fa-cog m-r-10"></i>
+                                    </span>
+                                    Роли
+                                </a>
+                                <hr class="dropdown-divider">
+                                <a class="navbar-item" href="http://bulma.io/documentation/layout/container/">
+                                    <span class="icon">
+                                        <i class="fa fa-fw fa-sign-out m-r-10"></i>
+                                    </span>
+                                    Отделы
+                                </a>
+                                <a class="navbar-item" href="http://bulma.io/documentation/layout/container/">
+                                    <span class="icon">
+                                        <i class="fa fa-fw fa-sign-out m-r-10"></i>
+                                    </span>
+                                    Должности
+                                </a>
+                                <a class="navbar-item" href="http://bulma.io/documentation/layout/container/">
+                                    <span class="icon">
+                                        <i class="fa fa-fw fa-sign-out m-r-10"></i>
+                                    </span>
+                                    Личный кабинет
+                                </a>
+                                <a class="navbar-item" href="http://bulma.io/documentation/layout/container/">
+                                    <span class="icon">
+                                        <i class="fa fa-fw fa-sign-out m-r-10"></i>
+                                    </span>
+                                    О компании
+                                </a>
+                            </div>
+                        </button>
+                        <button class="navbar-item has-dropdown is-hoverable is-tab">
+                            <a class="navbar-item">
+                                 <span class="icon is-small">
+                                    <i class='fa fa-gears m-r-10'></i>
+                                 </span>
+                                Настройки
+                            </a>
+                            <div class="navbar-dropdown ">
+                                <a class="navbar-item" href={{ url('/users') }}>
+                                    <span class="icon is-small">
+                                        <i class="fa fa-fw fa-users m-r-10"></i>
+                                    </span>
+                                    Пользователи</a>
+                                <a class="navbar-item" href="http://bulma.io/documentation/modifiers/syntax/">
+                                    <span class="icon is-small">
+                                        <i class="fa fa-fw fa-bell m-r-10"></i>
+                                    </span>
+                                    Клиенты
+                                </a>
+                                <a class="navbar-item" href="http://bulma.io/documentation/columns/basics/">
+                                    <span class="icon is-small">
+                                        <i class="fa fa-fw fa-cog m-r-10"></i>
+                                    </span>
+                                    Роли
+                                </a>
+                                <a class="navbar-item" href="http://bulma.io/documentation/layout/container/">
+                                    <span class="icon is-small">
+                                        <i class="fa fa-fw fa-sign-out m-r-10"></i>
+                                    </span>
+                                    Отделы
+                                </a>
+                                <a class="navbar-item" href="http://bulma.io/documentation/layout/container/">
+                                    <span class="icon is-small">
+                                        <i class="fa fa-fw fa-sign-out m-r-10"></i>
+                                    </span>
+                                    Должности
+                                </a>
+                                <hr class="dropdown-divider">
+                                <a class="navbar-item" href="http://bulma.io/documentation/layout/container/">
+                                    <span class="icon is-small">
+                                        <i class="fa fa-fw fa-sign-out m-r-10"></i>
+                                    </span>
+                                    Личный кабинет
+                                </a>
+                                <hr class="dropdown-divider">
+                                <a class="navbar-item has-dropdown is-hoverable" href="http://bulma.io/documentation/layout/container/">
+                                    <span class="icon is-small">
+                                        <i class="fa fa-fw fa-sign-out m-r-10"></i>
+                                    </span>
+                                    О компании
+                                </a>
+                            </div>
+                        </button>
+                    </div>
                 </div>
                 <div class="nav-right nav-menu" style="overflow: visible">
                     @if(Auth::guest())
@@ -37,11 +141,11 @@
                                 {{--</figure>--}}
                             {{--</button>--}}
                             <button class="dropdown is-aligned-right nav-item is-tab">
-                                Hey, {{ Auth::user()->name }}
+                                Hey, {{ Auth::user()->name }} !
                                 <ul class="dropdown-menu" style="overflow: visible;">
                                     <li><a href="#">
                                           <span class="icon">
-                                            <i class="fa fa-fw fa-user-circle-o m-r-5"></i>
+                                            <i class="fa fa-fw fa-user-circle-o m-r-10"></i>
                                           </span>Profile
                                         </a>
                                     </li>

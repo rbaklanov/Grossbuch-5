@@ -13984,6 +13984,137 @@ label.panel-block:hover {
   transition: opacity 86ms ease-out, visibility 86ms ease-out;
 }
 
+/* ========================================
+   ============ Text Overrides ===========
+   ======================================== */
+
+.is-muted {
+  color: #b5b5b5 !important;
+}
+
+a.is-muted:hover {
+  color: #7a7a7a !important;
+}
+
+/* ========================================
+   =========== Dropdown Override ==========
+   ======================================== */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu,
+.navbar-dropdown {
+  -webkit-box-shadow: 0 0 8px #777;
+          box-shadow: 0 0 8px #777;
+  background-color: #fff;
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 105%;
+  z-index: 1000;
+  padding: 10px 0 0 0;
+  min-width: 200px;
+  -webkit-box-shadow: 0 0 1px rgba(57, 70, 78, 0.15), 0 20px 55px -8px rgba(57, 70, 78, 0.25);
+          box-shadow: 0 0 1px rgba(57, 70, 78, 0.15), 0 20px 55px -8px rgba(57, 70, 78, 0.25);
+  text-align: left;
+}
+
+.dropdown-menu li.separator,
+.navbar-dropdown li.separator {
+  margin: 5px 0;
+  width: 100%;
+  border-top: 1px solid #ccc;
+}
+
+.dropdown-menu li > a,
+.navbar-dropdown li > a {
+  display: block;
+  padding: 5px 0 5px 15px;
+  margin: 5px 0;
+}
+
+.dropdown-menu li > a:hover,
+.navbar-dropdown li > a:hover {
+  background-color: whitesmoke;
+}
+
+.dropdown.is-open .dropdown-menu {
+  display: block;
+}
+
+.dropdown.is-aligned-right .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+/* ========================================
+   =========== Nav Item Override ==========
+   ======================================== */
+
+button.nav-item,
+button.navbar-item {
+  background-color: transparent;
+  border: none;
+  color: #7a7a7a;
+}
+
+button.nav-item:hover,
+button.navbar-item:hover {
+  color: #363636;
+}
+
+button.nav-item.is-active,
+button.navbar-item.is-active {
+  color: #363636;
+}
+
+button.nav-item.is-tab,
+button.navbar-item.is-tab {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  padding-bottom: calc(0.75rem - 1px);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: calc(0.75rem - 1px);
+}
+
+button.nav-item:hover,
+button.navbar-item:hover {
+  border-bottom-color: #00d1b2;
+  border-top-color: transparent;
+}
+
+button.nav-item.is-active,
+button.navbar-item.is-active {
+  border-bottom: 3px solid #00d1b2;
+  color: #00d1b2;
+  padding-bottom: calc(0.75rem - 3px);
+}
+
+button > a.navbar-item:hover {
+  background-color: #fff;
+}
+
+.navbar-item {
+  font-size: 0.9rem;
+  line-height: 0.9;
+  color: #7a7a7a;
+}
+
+.nav-item img {
+  max-height: 2.8rem;
+}
+
+.nav {
+  height: 4.5rem;
+}
+
+.columns {
+  margin-top: 0;
+}
+
 .m-t-5 {
   margin-top: 5px;
 }

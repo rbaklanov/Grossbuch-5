@@ -20,13 +20,13 @@ a.is-muted:hover{
   position: relative;
 }
 
-.dropdown-menu {
+.dropdown-menu, .navbar-dropdown {
   box-shadow: 0 0 8px #777;
-  background-color: white;
+  background-color: $navbar-default-bg;
   display: none;
   left: 0;
   position: absolute;
-  top: 106%;
+  top: 105%;
   z-index: 1000;
   padding: 10px 0 0 0;
   min-width: 200px;
@@ -59,7 +59,6 @@ a.is-muted:hover{
   right: 0;
 }
 
-
 /* ========================================
    =========== Nav Item Override ==========
    ======================================== */
@@ -69,7 +68,7 @@ a.is-muted:hover{
 // code but targeting <button> instead, plus a few
 // modifications to normalize the <button> css
 
-button.nav-item {
+button.nav-item, button.navbar-item  {
   background-color: transparent;
   border: none;
   color: $text-light;
@@ -104,11 +103,23 @@ button.nav-item {
   }
 }
 
+button>a.navbar-item:hover {
+  background-color: $navbar-default-bg;
+}
 
+.navbar-item {
+  font-size: 0.9rem;
+  line-height: 0.9;
+  color: #7a7a7a;
+}
 .nav-item img {
   max-height: 2.8rem;
 }
 
 .nav {
   height: 4.5rem;
+}
+
+.columns {
+  margin-top: 0;
 }
